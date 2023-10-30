@@ -8,7 +8,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
-    return 'Hello from desktop!'
+    return 'Hello from desktop +_ood++ webhook!'
 
 ## route for updating on github push
 @app.route('/gitupdate', methods=['POST'])
