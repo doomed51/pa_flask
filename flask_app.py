@@ -9,7 +9,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
-    return 'Hello from desktop +_sad++ webhook!'
+    return 'Hello from desktop +_d++ webhook!'
 
 @app.route('/test')
 def test():
