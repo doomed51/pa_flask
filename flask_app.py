@@ -1,10 +1,11 @@
 
 # A very simple Flask Hello World app for you to get started with...
 
-from flask import Flask, request
+from flask import Flask, request, render_template
 import git
 
 app = Flask(__name__)
+app.config["DEBUG"] = True
 
 @app.route('/')
 def hello_world():
@@ -22,6 +23,10 @@ def webhook():
     else:
         return 'Wrong event type', 400
 
+@app.route('/test')
+def index():
+    return render_template("test_page.html")
+
 def took():
     repo = git.Repo('./')
 
@@ -29,4 +34,3 @@ def took():
     origin.pull()
     print(origin)
 
-took()
